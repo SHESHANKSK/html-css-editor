@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Code Compiler Implementation</title>
+    <script>
+        function compileHTML(feild, e) {
+            document.getElementById('output').innerHTML = feild.value;
+
+        }
+
+        function compileCSS(feild, e) {
+            document.getElementById('styling').innerHTML = feild.value;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <style id="styling"></style>
+    <textarea name="htmlcode" id="htmlcode" cols="30" rows="10" placeholder="HTML code  Here"
+        onkeyup="compileHTML(this)"></textarea>
+
+    <textarea name="csscode" id="csscode" cols="30" rows="10" placeholder="CSS code Here"
+        onkeyup="compileCSS(this)"></textarea>
+
+    <div id="output"></div>
+
+
+</body>
+
+</html>
