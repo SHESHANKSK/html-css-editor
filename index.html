@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Code Compiler Implementation</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script>
         function compileHTML(feild, e) {
             document.getElementById('output').innerHTML = feild.value;
@@ -21,16 +24,30 @@
 </head>
 
 <body>
+    <div class="container-span" style="text-align: center ;">
+        <div class="row" style="background-color: #0cbaba;
+        background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%); padding:2%;
+        ">
+            <div class="row">
+                <h1 style="color:#0cbaba; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Type
+                    Your HTML & CSS Code Here</h1>
+            </div>
+            <div class="col-md-6">
+                <textarea name="htmlcode" id="htmlcode" cols="10" rows="10" placeholder="HTML code"
+                    onkeyup="compileHTML(this)" style="width: 90% ; border-radius : 12px;"></textarea>
+            </div>
+            <div class="col-md-6">
+                <textarea name="csscode" id="csscode" cols="10" rows="10" placeholder="CSS code"
+                    onkeyup="compileCSS(this)" style="width: 90% ; border-radius : 12px;"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <h1 style="color:#380036; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Output
+            </h1>
+            <div id="output"></div>
+        </div>
+    </div>
     <style id="styling"></style>
-    <textarea name="htmlcode" id="htmlcode" cols="30" rows="10" placeholder="HTML code  Here"
-        onkeyup="compileHTML(this)"></textarea>
-
-    <textarea name="csscode" id="csscode" cols="30" rows="10" placeholder="CSS code Here"
-        onkeyup="compileCSS(this)"></textarea>
-
-    <div id="output"></div>
-
-
 </body>
 
 </html>
