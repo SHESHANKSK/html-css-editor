@@ -4,11 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Online HTML CSS editor " />
+    <meta name="description" content="Online HTML and CSS Code Editor" />
+    <meta name="subject" content="Online HTML and CSS Code Editor">
+    <meta name="copyright" content="Sheshank Kindalkar">
+    <meta name="topic" content="Online Code Editor">
+    <meta name="summary" content="Online HTML and CSS Code Editor">
+    <meta name="Classification" content="Online Code Editor">
+    <meta name="author" content="Sheshank Kindalkar, sheshankkindalkar@gmail.com">
+    <meta name="designer" content="Sheshank Kindalkar">
+    <meta name="copyright" content="Sheshank Kindalkar">
+    <meta name="owner" content="Sheshank Kindalkar">
+    <meta name="revised" content="OnlineHTMLCSSEditor, 18/06/2022" />
+
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
     <title>HTML Code Compiler Implementation</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        #contspan {
+            text-align: center;
+        }
+
+        #div01 {
+            background-color: #0cbaba;
+            background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+            padding: 2%;
+        }
+
+        #head01 {
+            color: #0cbaba;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #head02 {
+            color: #380036;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
     <script>
         function compileHTML(feild, e) {
             document.getElementById('output').innerHTML = feild.value;
@@ -20,34 +57,41 @@
 
         }
 
+        function compileJS(feild, e) {
+            document.getElementById('scripting').innerHTML = feild.value;
+
+        }
+
     </script>
 </head>
 
 <body>
-    <div class="container-span" style="text-align: center ;">
-        <div class="row" style="background-color: #0cbaba;
-        background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%); padding:2%;
-        ">
+    <div class="container-span" id="contspan">
+        <div class="row" id="div01">
             <div class="row">
-                <h1 style="color:#0cbaba; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Type
-                    Your HTML & CSS Code Here</h1>
+                <h1 id="head01">Type Your HTML & CSS Code Here</h1>
             </div>
-            <div class="col-md-6">
-                <textarea name="htmlcode" id="htmlcode" cols="10" rows="10" placeholder="HTML code"
+            <div class="col-md-4">
+                <textarea name="htmlcode" id="htmlcode" cols="10" rows="10" placeholder="Write HTML Here"
                     onkeyup="compileHTML(this)" style="width: 90% ; border-radius : 12px;"></textarea>
             </div>
-            <div class="col-md-6">
-                <textarea name="csscode" id="csscode" cols="10" rows="10" placeholder="CSS code"
+            <div class="col-md-4">
+                <textarea name="csscode" id="csscode" cols="10" rows="10" placeholder="Write CSS Here"
                     onkeyup="compileCSS(this)" style="width: 90% ; border-radius : 12px;"></textarea>
+            </div>
+            <div class="col-md-4">
+                <textarea name="jscode" id="jscode" cols="10" rows="10" placeholder="Write Javascript Here"
+                    onkeyup="compileJS(this)" style="width: 90% ; border-radius : 12px;"></textarea>
             </div>
         </div>
         <div class="row">
-            <h1 style="color:#380036; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Output
+            <h1 id="head02">Output
             </h1>
             <div id="output"></div>
         </div>
     </div>
     <style id="styling"></style>
+    <script id="scripting"></script>
 </body>
 
 </html>
